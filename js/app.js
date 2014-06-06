@@ -39,7 +39,7 @@ var checkGuess = function(guess) {
 	var delta = Math.abs(secretNumber - guess);
 	var text;
 	var newGuess;
-	logger("delta = " + delta);
+	//logger("delta = " + delta);
 	if (delta == 0) {
 		text = "Winner Winner Winner!!!";
 		$("form").hide();
@@ -98,7 +98,7 @@ $(document).ready(function(){
 			$("#guessList").append(newList);
 			$("#count").text(counter);
 		}
-		$("#userGuess").val("");
+		$("#userGuess").val("").select();
 		return false;
 	});
 
